@@ -1,8 +1,12 @@
 ################################# LIBRARIES ####################################
 LIB_DIR				= modules
 
-LINK_READLINE		= -L${HOME}/.brew/opt/readline/lib -lreadline
-INC_DIR_READLINE	= -I${HOME}/.brew/opt/readline/include
+
+#Flags are different in m1 and cluster environments
+LINK_READLINE		= -L/opt/homebrew/opt/readline/lib -lreadline
+INC_DIR_READLINE	= -I/opt/homebrew/opt/readline/include
+#LINK_READLINE		= -L${HOME}/.brew/opt/readline/lib -lreadline
+#INC_DIR_READLINE	= -I${HOME}/.brew/opt/readline/include
 
 LIBFT_DIR			= $(LIB_DIR)/libft
 LIBFT				= $(LIBFT_DIR)/libft.a
